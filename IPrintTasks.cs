@@ -1,11 +1,19 @@
 namespace ISPDemoConsole
 {
-    public interface IPrintTasks
-    {
-        bool PrintContent(string content);
-        bool ScanContent(string content);
-        bool FaxContent(string content);
-        bool PhotoCopyContent(string content);
-        bool PrintDuplexContent(string content);
-    }
+  interface IPrintScanContent
+  {
+    bool PhotoCopyContent(string content);
+    bool PrintContent(string content);
+    bool ScanContent(string content);      
+  }
+    
+  interface IFaxContent
+  {
+    bool FaxContent(string content);
+  }
+
+  interface IPrintDuplex
+  {
+    bool PrintDuplexContent(string content);
+  }
 }

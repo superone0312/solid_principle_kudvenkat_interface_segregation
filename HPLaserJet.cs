@@ -2,27 +2,27 @@ using System;
 
 namespace ISPDemoConsole.Client
 {
-    class HPLaserJet : IPrintTasks
+    class HPLaserJet : IPrintScanContent, IFaxContent, IPrintDuplex
     {
         public bool FaxContent(string content)
         {
-            Console.WriteLine("Fax Done"); return true;
+            Console.WriteLine("HP: Fax Done"); return true;
         }
         public bool PhotoCopyContent(string content)
         {
-            Console.WriteLine("PhotoCopy Done"); return true;
+            Console.WriteLine("HP: PhotoCopy Done"); return true;
         }
         public bool PrintContent(string content)
         {
-            Console.WriteLine("Print Done"); return true;
+            Console.WriteLine("HP: Print Done"); return true;
         }
         public bool PrintDuplexContent(string content)
         {
-            Console.WriteLine("Print Duplex Done"); return true;
+            Console.WriteLine("HP: Print Duplex Done"); return true;
         }
         public bool ScanContent(string content)
         {
-            Console.WriteLine("Scan Done"); return true;
+            Console.WriteLine("HP: Scan Done"); return true;
         }
     }
 }

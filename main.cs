@@ -2,7 +2,6 @@ using System;
 
 namespace ISPDemoConsole
 {
-
   class MainClass {
     public static void Main (string[] args) {
       /// why use var?
@@ -10,8 +9,6 @@ namespace ISPDemoConsole
       client.PhotoCopyContent("test text");
       client.PrintContent("test text");
       client.ScanContent("test text");
-      Console.WriteLine(client.FaxContent("test text").ToString());
-      Console.WriteLine(client.PrintDuplexContent("test text").ToString());
 
       var client2 = new Client.HPLaserJet();
       client2.FaxContent("test text");
